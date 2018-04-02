@@ -40,7 +40,7 @@ use DataDog\DogStatsd;
 $statsd = new DogStatsd();
 
 if ($stmt = $conn->prepare('INSERT INTO `contest` (
-    'macaddres'
+        'macaddres'
 	'wiinumber'
 	'KeyVersion'
 	'Version'
@@ -60,7 +60,7 @@ if ($stmt = $conn->prepare('INSERT INTO `contest` (
 if ($stmt->execute())
         echo(100);
     else {
-        error_log("SQL statement error on vote: " . $stmt->error);
+        error_log("SQL statement error on contest participate: " . $stmt->error);
         echo(500);
     }
 
